@@ -291,6 +291,7 @@
 				2086EF431CC88C3900C1DC35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

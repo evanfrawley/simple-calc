@@ -1,4 +1,4 @@
-//
+//HistoryViewController
 //  Model.swift
 //  CalcApp
 //
@@ -14,7 +14,9 @@ public class Data {
     public var curr : String = ""
     public var op : String = ""
     public var toggle : Bool = false
-    public var history : [String] = []
+    public var history : [String] = ["one", "two", "three"]
+    
+    
     
     public init() {
         self.arr = []
