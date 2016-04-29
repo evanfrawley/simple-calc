@@ -13,6 +13,7 @@
 		2086EF3A1CC88C3900C1DC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2086EF391CC88C3900C1DC35 /* Assets.xcassets */; };
 		2086EF3D1CC88C3900C1DC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2086EF3B1CC88C3900C1DC35 /* LaunchScreen.storyboard */; };
 		2086EF451CC89CCC00C1DC35 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086EF441CC89CCC00C1DC35 /* Model.swift */; };
+		2095EE3D1CD41A3E007CB980 /* VCs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095EE3C1CD41A3E007CB980 /* VCs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2086EF3C1CC88C3900C1DC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2086EF3E1CC88C3900C1DC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2086EF441CC89CCC00C1DC35 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2095EE3C1CD41A3E007CB980 /* VCs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2086EF321CC88C3900C1DC35 /* AppDelegate.swift */,
 				2086EF341CC88C3900C1DC35 /* ViewController.swift */,
 				2086EF361CC88C3900C1DC35 /* Main.storyboard */,
+				2095EE3C1CD41A3E007CB980 /* VCs.swift */,
 				2086EF441CC89CCC00C1DC35 /* Model.swift */,
 				2086EF391CC88C3900C1DC35 /* Assets.xcassets */,
 				2086EF3B1CC88C3900C1DC35 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2095EE3D1CD41A3E007CB980 /* VCs.swift in Sources */,
 				2086EF451CC89CCC00C1DC35 /* Model.swift in Sources */,
 				2086EF351CC88C3900C1DC35 /* ViewController.swift in Sources */,
 				2086EF331CC88C3900C1DC35 /* AppDelegate.swift in Sources */,

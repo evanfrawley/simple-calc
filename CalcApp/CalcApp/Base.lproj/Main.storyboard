@@ -134,6 +134,7 @@
                                         <state key="normal" title="RPN"/>
                                         <connections>
                                             <action selector="RPNToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxN-iN-wMj"/>
+                                            <action selector="showHistoryu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RtP-4L-Xf3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -141,59 +142,60 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dFJ-L6-TGs">
                                 <rect key="frame" x="364" y="180" width="50" height="240"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6V-9l-yNZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6V-9l-yNZ">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                         <state key="normal" title="3"/>
                                         <connections>
                                             <action selector="three:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PnQ-19-He1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKI-Lp-QiJ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKI-Lp-QiJ">
                                         <rect key="frame" x="0.0" y="30" width="50" height="30"/>
                                         <state key="normal" title="6"/>
                                         <connections>
                                             <action selector="six:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXN-We-5hx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-qA-0Hp">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-qA-0Hp">
                                         <rect key="frame" x="0.0" y="60" width="50" height="30"/>
                                         <state key="normal" title="9"/>
                                         <connections>
                                             <action selector="nine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpB-Wc-npX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngb-n5-raJ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngb-n5-raJ">
                                         <rect key="frame" x="0.0" y="90" width="50" height="30"/>
                                         <state key="normal" title="Space"/>
                                         <connections>
                                             <action selector="enter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9R-kw-3VF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXb-i4-JpG">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXb-i4-JpG">
                                         <rect key="frame" x="0.0" y="120" width="50" height="30"/>
                                         <state key="normal" title="%"/>
                                         <connections>
                                             <action selector="mod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E87-Mj-o29"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mot-eH-6fi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mot-eH-6fi">
                                         <rect key="frame" x="0.0" y="150" width="50" height="30"/>
                                         <state key="normal" title="="/>
                                         <connections>
                                             <action selector="equals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lf4-OU-mpu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqC-pA-gU6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqC-pA-gU6">
                                         <rect key="frame" x="0.0" y="180" width="50" height="30"/>
                                         <state key="normal" title="fact"/>
                                         <connections>
                                             <action selector="fact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="par-Uq-kWZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4og-vd-m0L">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4og-vd-m0L">
                                         <rect key="frame" x="0.0" y="210" width="50" height="30"/>
                                         <state key="normal" title="History"/>
                                         <connections>
+                                            <action selector="addView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bfk-Bi-pAI"/>
                                             <segue destination="VkM-4b-65U" kind="show" id="xBH-Mv-JEr"/>
                                         </connections>
                                     </button>
@@ -232,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="245" y="589"/>
         </scene>
-        <!--View Controller-->
+        <!--HistoryVC-->
         <scene sceneID="dcp-NC-xfa">
             <objects>
-                <viewController id="VkM-4b-65U" customClass="ViewController" customModule="CalcApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="History" id="VkM-4b-65U" customClass="HistoryVC" customModule="CalcApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dgp-2j-6Ig"/>
                         <viewControllerLayoutGuide type="bottom" id="etn-V2-Ujs"/>

@@ -12,13 +12,54 @@ import UIKit
 class ViewController: UIViewController {
 
     let data = Data()
+    private var historyVC : HistoryVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    func builder() {
+        if historyVC == nil {
+            historyVC =
+                storyboard?
+                    .instantiateViewControllerWithIdentifier("History")
+                as! HistoryVC
+            NSLog("Created")
+        }
+    }
+    
     @IBOutlet weak var history: UIScrollView!
+    
+    @IBOutlet weak var test123: UILabel!
+    
+    @IBOutlet weak var vv: UIView!
+    
+    var i : Int = 0
+    var label: UILabel!
+    var v : UIView!
+    func viewSetup() {
+        history = UIScrollView.init(frame: CGRect(x: 100, y: 100, width: 240, height: 200))
+        v = UIView.init(frame: CGRect(x: 10, y: 10, width: 240, height: 100))
+        self.view.addSubview(v)
+    }
+    
+    func labelSetup() {
+        if v == nil {
+            viewSetup()
+        }
+        builder()
+        label = UILabel.init(frame: CGRect(x: 0, y: CGFloat(i * 20), width: 240, height: 20))
+        label.text = "Test"
+        
+        historyVC.view.addSubview(label)
+        i = i + 1
+    
+    }
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -119,6 +160,11 @@ class ViewController: UIViewController {
         harvest("fact")
     }
     
+    @IBAction func showHistoryu(sender: AnyObject) {
+        labelSetup()
+    }
+    
+    
     //compouds number and appends to array if needed
     //TODO: need to include shit that does the toggle
     func compound(incoming: String) {
@@ -142,6 +188,8 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    
     
     //TODO: need to do shit that does the toggle
     func calculate() {
