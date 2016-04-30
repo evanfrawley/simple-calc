@@ -11,55 +11,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let data = Data()
+    var data = Data()
     private var historyVC : HistoryVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    func builder() {
-        if historyVC == nil {
-            historyVC =
-                storyboard?
-                    .instantiateViewControllerWithIdentifier("History")
-                as! HistoryVC
-            NSLog("Created")
-        }
-    }
-    
-    @IBOutlet weak var history: UIScrollView!
-    
-    @IBOutlet weak var test123: UILabel!
-    
-    @IBOutlet weak var vv: UIView!
-    
-    var i : Int = 0
-    var label: UILabel!
-    var v : UIView!
-    func viewSetup() {
-        history = UIScrollView.init(frame: CGRect(x: 100, y: 100, width: 240, height: 200))
-        v = UIView.init(frame: CGRect(x: 10, y: 10, width: 240, height: 100))
-        self.view.addSubview(v)
-    }
-    
-    func labelSetup() {
-        if v == nil {
-            viewSetup()
-        }
-        builder()
-        label = UILabel.init(frame: CGRect(x: 0, y: CGFloat(i * 20), width: 240, height: 20))
-        label.text = "Test"
-        
-        historyVC.view.addSubview(label)
-        i = i + 1
-    
-    }
-    
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -125,23 +83,23 @@ class ViewController: UIViewController {
     }
    
     @IBAction func add(sender: AnyObject) {
-        harvest("add")
+        harvest("+")
     }
     
     @IBAction func subtract(sender: AnyObject) {
-        harvest("sub")
+        harvest("-")
     }
     
     @IBAction func multiply(sender: AnyObject) {
-        harvest("mul")
+        harvest("*")
     }
     
     @IBAction func divide(sender: AnyObject) {
-        harvest("div")
+        harvest("/")
     }
     
     @IBAction func mod(sender: AnyObject) {
-        harvest("mod")
+        harvest("%")
     }
     
     @IBAction func equals(sender: AnyObject) {
@@ -160,9 +118,6 @@ class ViewController: UIViewController {
         harvest("fact")
     }
     
-    @IBAction func showHistoryu(sender: AnyObject) {
-        labelSetup()
-    }
     
     
     //compouds number and appends to array if needed
@@ -199,19 +154,19 @@ class ViewController: UIViewController {
         let oper = self.data.op
         var total : Double = 0
         
-        if oper == "add" { // add
+        if oper == "+" { // add
             total = self.data.arr[0] + self.data.arr[1]
             
-        } else if oper == "sub" { // sub
+        } else if oper == "-" { // sub
             total = self.data.arr[0] - self.data.arr[1]
             
-        } else if oper == "mul" { //mul
+        } else if oper == "*" { //mul
             total = self.data.arr[0] * self.data.arr[1]
             
-        } else if oper == "div" {//div
+        } else if oper == "/" {//div
             total = self.data.arr[0] / self.data.arr[1]
             
-        } else if oper == "mod" { //mod
+        } else if oper == "%" { //mod
             total = self.data.arr[0] % self.data.arr[1]
             
         } else if oper == "avg" { //avg
@@ -234,7 +189,8 @@ class ViewController: UIViewController {
         }
         
         self.resultLabel.text = String(total)
-        
+        let histItem = "\(String(self.currentLabel.text!))=\(String(self.resultLabel.text!))"
+        self.data.history.append(histItem)
         //end of method
         self.data.clear()
         self.currentLabel.text = ""
@@ -242,7 +198,14 @@ class ViewController: UIViewController {
     }
     
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toHistory") {
+            let toHistory = segue.destinationViewController as! HistoryVC
+            
+            toHistory.data = self.data
+            
+        }
+    }
     
 }
 

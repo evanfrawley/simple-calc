@@ -195,8 +195,7 @@
                                         <rect key="frame" x="0.0" y="210" width="50" height="30"/>
                                         <state key="normal" title="History"/>
                                         <connections>
-                                            <action selector="addView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bfk-Bi-pAI"/>
-                                            <segue destination="VkM-4b-65U" kind="show" id="xBH-Mv-JEr"/>
+                                            <segue destination="VkM-4b-65U" kind="show" identifier="toHistory" id="xBH-Mv-JEr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -250,12 +249,25 @@
                                 <rect key="frame" x="20" y="20" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="r4g-zx-qzo"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toCalc" id="r4g-zx-qzo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJz-9g-oeN">
+                                <rect key="frame" x="140" y="84" width="320" height="431"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cJz-9g-oeN" firstAttribute="centerX" secondItem="o7e-Vo-zZm" secondAttribute="centerX" id="aO8-GK-viD"/>
+                            <constraint firstItem="cJz-9g-oeN" firstAttribute="centerY" secondItem="o7e-Vo-zZm" secondAttribute="centerY" id="cuS-Dr-qI9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="historyInfo" destination="cJz-9g-oeN" id="1UJ-um-RxK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOy-wj-lbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
